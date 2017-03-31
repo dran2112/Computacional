@@ -4,7 +4,7 @@
 #include<time.h>  // me busca fecha y hora
 #define N 6	// "ancho" de la red
 #define M 6	// "altura" de la red
-#define P 0.5   // probabilidad de ocupación
+#define P 0.1   // probabilidad de ocupación
 
 void grilla_inicial(float* g, float* g2);
 void grilla(float* g);
@@ -37,7 +37,7 @@ void grilla_inicial(float* g, float* g2){
      for (i=0; i<N; i++){
 	for(j=0; j<M; j++){	
 
-		g[i*N + j] = (double)rand() / (double)RAND_MAX;   // número aleatorio entre 0 y 1
+		g[i*N + j] = (float)rand() / (float)RAND_MAX;   // número aleatorio entre 0 y 1
 		g2[i*N+j] = g[i*N + j];
 	}
      }	
