@@ -4,7 +4,7 @@
 #include<time.h>  // me busca fecha y hora
 #define N 6	// "ancho" de la red
 #define M 6	// "altura" de la red
-#define P 0.1   // probabilidad de ocupación
+#define P 0.5   // probabilidad de ocupación
 
 void grilla_inicial(float* g, float* g2);
 void grilla(float* g);
