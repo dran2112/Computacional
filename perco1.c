@@ -33,27 +33,21 @@ int main(){
 
 void grilla_inicial(float* g, float* g2){
 
-     int i,j;  
-     for (i=0; i<N; i++){
-	for(j=0; j<M; j++){	
-
-		g[i*N + j] = (float)rand() / (float)RAND_MAX;   // número aleatorio entre 0 y 1
-		g2[i*N+j] = g[i*N + j];
-	}
+     int i;  
+     for (i=0; i<N*M; i++){
+		g[i] = (float)rand() / (float)RAND_MAX;   // número aleatorio entre 0 y 1
+		g2[i] = g[i];
+	
      }	
 
 }
 
 void grilla(float* g){
 
-     int i,j;     	
-     for (i=0; i<N; i++){
-	for(j=0; j<M; j++){	
-
-		if(g[i*N+j] <= P){ g[i*N+j] = 1; }
-                else { g[i*N+j] = 0; }
-		
-	}
+     int i;     	
+     for (i=0; i<N*M; i++){
+		if(g[i] <= P){ g[i] = 1; }
+                else { g[i] = 0; }
      }
 }
 
